@@ -1,5 +1,7 @@
 # ArrayUtils
-## Simple recruitment project that contains array handling and JUnit tests. Made with Java and build with Maven.
+## Simple project that contains array handling and JUnit tests. Made with Java and build with Maven.
+
+You can run program with Maven (mvn compile exec:java). Arguments is given in pom.xml file. You can give your own arguments with flag from command line. If you do so, give the numbers separated by comms, without spaces.
 
 ### Assigment (in Finnish)
 Java-ohjelma yksikkötesteineen, joka selvittää pienimmän määrän numeroita mitä luonnollisessa järjestyksessä mahtuu taulukon eri numeroiden välille. Esimerkiksi taulukon [ 1, 4, 10 ] oikea vastaus olisi 2, sillä numeroiden 1 ja 4 väliin mahtuu numeron 2 ja 3 ja muiden numeroiden väliin mahtuisi suurempi kappalemäärä numeroita.
