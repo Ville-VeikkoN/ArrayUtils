@@ -1,5 +1,6 @@
 package array_utils;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
@@ -62,15 +63,16 @@ public class ArrayUtilsTest {
 
 	@Test
 	public void testSortByNaturalOrder() {
-		int[] expected = new int[] {-100, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 100};
-		int[] unsorted = new int[] { -5, -1, -3, 5, 3, 100, -2, 4, -4, 0, 2, 1, -100};
+		int[] expected = new int[] { -100, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 100 };
+		int[] unsorted = new int[] { -5, -1, -3, 5, 3, 100, -2, 4, -4, 0, 2, 1, -100 };
+
 		int[] sorted = ArrayUtils.sortByNaturalOrder(unsorted);
 		assertEquals(Arrays.toString(sorted), Arrays.toString(expected));
 	}
-	
+
 	@Test
 	public void testCopyArray() {
-		int[] array = new int[] {-100, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 100};
+		int[] array = new int[] { -100, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 100 };
 		assertEquals(Arrays.toString(array), Arrays.toString(ArrayUtils.copyArray(array)));
 	}
 

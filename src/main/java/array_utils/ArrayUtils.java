@@ -1,4 +1,5 @@
 package array_utils;
+
 import org.eclipse.jdt.annotation.NonNull;
 
 /**
@@ -13,8 +14,8 @@ class ArrayUtils {
 	 * natural order. 0 is considered as valid result if there is adjacent or
 	 * duplicate values.
 	 * 
-	 * @param values that can be n amount of numbers or an array
-	 * @return minValueOfNumbers minimum of numbers that can be placed between given
+	 * @param values any amount of numbers or an array of numbers
+	 * @return minValueOfNumbers minimum amount of numbers that can be placed between given
 	 *         values
 	 * @throws IllegalArgumentException if you give less than 2 values
 	 */
@@ -23,17 +24,22 @@ class ArrayUtils {
 			throw new IllegalArgumentException("There must be atleast two values");
 		}
 
-		// Sorting these values before, makes the checking a lot easier.
-		// Does the same thing as Arrays.sort(), just wanted to create my own methods.
+		// Does the same thing as Arrays.sort(), just wanted to create my own methods
+		// for this assignment.
 		int[] sortedByNaturalOrder = sortByNaturalOrder(values);
 
-		int minValueOfNumbers = getAmountOfNumbersBetween(sortedByNaturalOrder[0], sortedByNaturalOrder[1]);
+		int minValueOfNumbers = 0;
+		for (int i = 0; i < sortedByNaturalOrder.length - 1; i++) {
 
-		for (int i = 1; i < sortedByNaturalOrder.length - 1; i++) {
 			int numbersBetween = getAmountOfNumbersBetween(sortedByNaturalOrder[i], sortedByNaturalOrder[i + 1]);
 
-			if (numbersBetween < minValueOfNumbers) {
+			if (i == 0 || numbersBetween < minValueOfNumbers) {
 				minValueOfNumbers = numbersBetween;
+			}
+
+			// minimum value reached, no need to continue iterating
+			if (minValueOfNumbers == 0) {
+				return minValueOfNumbers;
 			}
 
 		}
@@ -50,7 +56,7 @@ class ArrayUtils {
 	 */
 	public static int[] sortByNaturalOrder(@NonNull final int[] array) {
 
-		// Does the same thing as Arrays.copyOf(), just wanted to create my own methods.
+		// Does the same thing as Arrays.copyOf()
 		int[] sortedArray = copyArray(array);
 
 		for (int i = 0; i < sortedArray.length; i++) {
@@ -85,17 +91,10 @@ class ArrayUtils {
 	 * 
 	 * @param from
 	 * @param to
-	 * @return numbersBetween the amount of numbers between given values
+	 * @return the amount of numbers between given values
 	 */
 	private static int getAmountOfNumbersBetween(final int from, final int to) {
-		int numbersBetween = 0;
-
-		if (from < to) {
-			for (int number = from + 1; number < to; number++) {
-				numbersBetween++;
-			}
-		}
-		return numbersBetween;
+		return from < to ? to - from - 1 : 0;
 	}
 
 	/**
