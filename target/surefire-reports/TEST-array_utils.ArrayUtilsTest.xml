@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="array_utils.ArrayUtilsTest" time="0.072" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="array_utils.ArrayUtilsTest" time="0.071" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\vi-ll\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\vi-ll\AppData\Local\Temp\surefire4631521365769578443\surefirebooter-20230224163951354_3.jar C:\Users\vi-ll\AppData\Local\Temp\surefire4631521365769578443 2023-02-24T16-39-50_969-jvmRun1 surefire-20230224163951354_1tmp surefire_0-20230224163951354_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\vi-ll\AppData\Local\Temp\surefire18253089198914360247\surefirebooter-20230225201711071_3.jar C:\Users\vi-ll\AppData\Local\Temp\surefire18253089198914360247 2023-02-25T20-17-10_690-jvmRun1 surefire-20230225201711071_1tmp surefire_0-20230225201711071_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\vi-ll\eclipse-workspace\array_utils\target\test-classes;C:\Users\vi-ll\eclipse-workspace\array_utils\target\classes;C:\Users\vi-ll\.m2\repository\org\eclipse\jdt\org.eclipse.jdt.annotation\2.2.700\org.eclipse.jdt.annotation-2.2.700.jar;C:\Users\vi-ll\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\vi-ll\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\vi-ll\AppData\Local\Temp\surefire4631521365769578443\surefirebooter-20230224163951354_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\vi-ll\AppData\Local\Temp\surefire18253089198914360247\surefirebooter-20230225201711071_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+10"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCopyArray" classname="array_utils.ArrayUtilsTest" time="0.002"/>
+  <testcase name="testCopyArray" classname="array_utils.ArrayUtilsTest" time="0.003"/>
   <testcase name="testfindMinimumNumbersBetweenValuesUsingIntegers" classname="array_utils.ArrayUtilsTest" time="0"/>
   <testcase name="testfindMinimumNumbersBetweenValuesWithEmptyArray" classname="array_utils.ArrayUtilsTest" time="0"/>
   <testcase name="testfindMinimumNumbersBetweenValuesUsingArray" classname="array_utils.ArrayUtilsTest" time="0"/>

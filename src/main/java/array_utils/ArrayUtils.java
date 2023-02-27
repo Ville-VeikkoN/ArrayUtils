@@ -10,40 +10,34 @@ import org.eclipse.jdt.annotation.NonNull;
 class ArrayUtils {
 
 	/**
-	 * Finds minimum amount of numbers that can fit between any of given values in
-	 * natural order. 0 is considered as valid result if there is adjacent or
+	 * Finds minimum amount of numbers that can fit (in natural order) between any
+	 * of given values. 0 is considered as valid result if there is adjacent or
 	 * duplicate values.
 	 * 
-	 * @param values any amount of numbers or an array of numbers
-	 * @return minValueOfNumbers minimum amount of numbers that can be placed between given
-	 *         values
+	 * @param values numbers or an array of numbers
+	 * @return minValueOfNumbers minimum amount of numbers that can be placed
+	 *         between given values
 	 * @throws IllegalArgumentException if you give less than 2 values
 	 */
 	public static int findMinimumNumbersBetweenValues(@NonNull final int... values) {
 		if (values.length < 2) {
 			throw new IllegalArgumentException("There must be atleast two values");
 		}
-
 		// Does the same thing as Arrays.sort(), just wanted to create my own methods
 		// for this assignment.
 		int[] sortedByNaturalOrder = sortByNaturalOrder(values);
-
 		int minValueOfNumbers = 0;
+
 		for (int i = 0; i < sortedByNaturalOrder.length - 1; i++) {
-
 			int numbersBetween = getAmountOfNumbersBetween(sortedByNaturalOrder[i], sortedByNaturalOrder[i + 1]);
-
 			if (i == 0 || numbersBetween < minValueOfNumbers) {
 				minValueOfNumbers = numbersBetween;
 			}
-
 			// minimum value reached, no need to continue iterating
 			if (minValueOfNumbers == 0) {
 				return minValueOfNumbers;
 			}
-
 		}
-
 		return minValueOfNumbers;
 	}
 
@@ -55,10 +49,9 @@ class ArrayUtils {
 	 * @return sorted copy of given array
 	 */
 	public static int[] sortByNaturalOrder(@NonNull final int[] array) {
-
 		// Does the same thing as Arrays.copyOf()
 		int[] sortedArray = copyArray(array);
-
+		
 		for (int i = 0; i < sortedArray.length; i++) {
 			for (int j = i + 1; j < sortedArray.length; j++) {
 				if (sortedArray[j] < sortedArray[i]) {
@@ -66,7 +59,6 @@ class ArrayUtils {
 				}
 			}
 		}
-
 		return sortedArray;
 	}
 
@@ -78,11 +70,10 @@ class ArrayUtils {
 	 */
 	public static int[] copyArray(@NonNull int[] arrayToCopy) {
 		int[] copy = new int[arrayToCopy.length];
-
+		
 		for (int i = 0; i < arrayToCopy.length; i++) {
 			copy[i] = arrayToCopy[i];
 		}
-
 		return copy;
 	}
 
