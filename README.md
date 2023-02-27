@@ -14,5 +14,5 @@ Java-ohjelma yksikkötesteineen, joka selvittää pienimmän määrän numeroita
 
 ### Own observations about assignment (in Finnish)
 Toteutin tehtävän mahdollisimman tarkasti annettuja reunaehtoja noudattaen, mutta muutama huomionarvoinen kommentti liittyen ylempänä kirjattuihin ehtoihin (1-4).
-* Kohdat 1-2: Funktio olettaa numeroiden olevan kokonaislukuja, mutta negatiiviset arvot sallitaan. Funktio järjestää saamansa taulukon/numerot luonnolliseen järjestykseen, jolloin järjestyksellä ei ole merkitystä.
+* Kohdat 1-2: Funktio olettaa numeroiden olevan kokonaislukuja, mutta negatiiviset arvot sallitaan. Funktio järjestää saamansa taulukon/numerot luonnolliseen järjestykseen, jolloin ne voidaan antaa sille missä järjestyksessä tahansa.
 * Kohta 3: Tulkitsin kohdan niin, että mikäli annettu taulukko numeroita sisältää useamman saman luvun tai vastaavasti vierekkäiset luvut, pienin mahdollinen määrä numeroita lukujen väliin on ei yhtään.
