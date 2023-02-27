@@ -1,7 +1,7 @@
 # ArrayUtils
 ## Simple project that contains array handling and JUnit tests. Made with Java and build with Maven.
 
-You can run program with Maven (```mvn compile exec:java```). Arguments is given in pom.xml file. You can give your own arguments with flag from command line. If you do so, give the numbers separated by comms, without spaces (example: ```mvn compile exec:java -Dexec.args="1,4,8,16"```).
+You can run program with Maven (```mvn compile exec:java```). Arguments is given in pom.xml file. You can give your own arguments with flag from command line. If you do so, give the numbers separated by commas, without spaces (example: ```mvn compile exec:java -Dexec.args="1,4,8,16"```).
 
 Tests can be run with ```mvn test```
 
@@ -14,6 +14,5 @@ Java-ohjelma yksikkötesteineen, joka selvittää pienimmän määrän numeroita
 
 ### Own observations about assignment (in Finnish)
 Toteutin tehtävän mahdollisimman tarkasti annettuja reunaehtoja noudattaen, mutta muutama huomionarvoinen kommentti liittyen ylempänä kirjattuihin ehtoihin (1-4).
-1. Ohjelmisto olettaa että numerot ovat kokonaislukuja, mutta sallii negatiiviset luvut
-2. Funktio järjestää saamansa taulukon/luvut luonnolliseen järjestykseen, jolloin funktiolle annettaessa ei järjestyksellä ole merkitystä.
-3. Tulkitsin kohdan niin, että mikäli annettu taulukko numeroita sisältää useamman saman luvun tai vastaavasti vierekkäiset luvut, pienin mahdollinen määrä numeroita lukujen väliin on ei yhtään.
+* Kohdat 1-2: Funktio olettaa numeroiden olevan kokonaislukuja, mutta negatiiviset arvot sallitaan. Funktio järjestää saamansa taulukon/numerot luonnolliseen järjestykseen, jolloin järjestyksellä ei ole merkitystä.
+* Kohta 3: Tulkitsin kohdan niin, että mikäli annettu taulukko numeroita sisältää useamman saman luvun tai vastaavasti vierekkäiset luvut, pienin mahdollinen määrä numeroita lukujen väliin on ei yhtään.
